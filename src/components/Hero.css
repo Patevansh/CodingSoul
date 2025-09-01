@@ -1,0 +1,312 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-background);
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+  z-index: 3;
+  animation: fadeInUp 1s ease-out;
+  transition: filter 0.2s ease-out, opacity 0.2s ease-out;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 24px;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.badge-text {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px -1px var(--color-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-main {
+  color: var(--color-text);
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.title-gradient {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out 0.6s both, gradientShift 3s ease-in-out infinite;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--color-textSecondary);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px var(--color-shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px var(--color-shadow);
+  background: var(--color-secondary);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px var(--color-shadow);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--color-textSecondary);
+  font-weight: 500;
+}
+
+.hero-visual {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 15px -3px var(--color-shadow);
+  backdrop-filter: blur(10px);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.card-1 {
+  top: -60px;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.card-2 {
+  top: 40px;
+  right: 80px;
+  animation-delay: -2s;
+}
+
+.card-3 {
+  top: 140px;
+  right: -20px;
+  animation-delay: -4s;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-icon {
+  font-size: 24px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(20deg);
+  }
+}
+
+@keyframes cyberpunkGlow {
+  0%, 100% {
+    text-shadow: 0 0 2px var(--color-primary), 0 0 4px var(--color-primary);
+  }
+  50% {
+    text-shadow: 0 0 4px var(--color-primary), 0 0 8px var(--color-primary);
+  }
+}
+
+/* Special cyberpunk effects - toned down */
+body[data-theme="cyberpunk"] .title-gradient {
+  animation: fadeInUp 1s ease-out 0.6s both, cyberpunkGlow 3s ease-in-out infinite;
+}
+
+body[data-theme="cyberpunk"] .btn-primary {
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.3), 0 4px 6px -1px var(--color-shadow);
+}
+
+body[data-theme="cyberpunk"] .btn-primary:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5), 0 20px 25px -5px var(--color-shadow);
+}
+
+body[data-theme="cyberpunk"] .floating-card {
+  border: 1px solid rgba(0, 212, 170, 0.3);
+  box-shadow: 0 0 8px rgba(0, 212, 170, 0.15), 0 10px 15px -3px var(--color-shadow);
+}
+
+/* Midnight theme enhancements */
+body[data-theme="midnight"] .btn-primary {
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3), 0 4px 6px -1px var(--color-shadow);
+}
+
+body[data-theme="midnight"] .btn-primary:hover {
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.5), 0 20px 25px -5px var(--color-shadow);
+}
+
+body[data-theme="midnight"] .floating-card {
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.2), 0 10px 15px -3px var(--color-shadow);
+}
+
+body[data-theme="midnight"] .badge-text {
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.1);
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 20px;
+    text-align: center;
+  }
+  
+  .hero-visual {
+    display: none;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .hero-stats {
+    gap: 20px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
