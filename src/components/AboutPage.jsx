@@ -53,25 +53,11 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: 'Alex Johnson',
-      role: 'Lead Developer',
-      description: 'Passionate about algorithms and creating educational tools',
-      avatar: '👨‍💻',
-      skills: ['React', 'Algorithm Design', 'UI/UX']
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'Data Structures Expert',
-      description: 'PhD in Computer Science with focus on algorithm optimization',
-      avatar: '👩‍🔬',
-      skills: ['Data Structures', 'Complexity Analysis', 'Research']
-    },
-    {
-      name: 'Mike Rodriguez',
-      role: 'Visual Designer',
-      description: 'Creates beautiful and intuitive user experiences',
-      avatar: '🎨',
-      skills: ['Visual Design', 'Animation', 'User Experience']
+      name: 'Vansh Patel',
+      role: 'Lead Developer & Creator',
+      description: 'Passionate full-stack developer dedicated to creating educational tools that make learning algorithms and data structures engaging and accessible.',
+      avatar: '�‍�',
+      skills: ['React', 'JavaScript', 'Algorithm Design', 'UI/UX', 'Full Stack Development']
     }
   ];
 
@@ -96,7 +82,7 @@ const AboutPage = () => {
         <div className="header-content">
           <h1 className="page-title">
             <span className="title-icon">ℹ️</span>
-            About AlgoViz
+            About DSA Visualizer
           </h1>
           <p className="page-description">
             A modern, interactive platform for learning algorithms and data structures through beautiful visualizations
@@ -110,12 +96,12 @@ const AboutPage = () => {
             <h2 className="section-title">Our Mission</h2>
             <div className="mission-text">
               <p>
-                AlgoViz was created to make algorithm learning more accessible and engaging. 
-                We believe that visual learning is one of the most effective ways to understand 
+                DSA Visualizer was created to make algorithm learning more accessible and engaging. 
+                I believe that visual learning is one of the most effective ways to understand 
                 complex computer science concepts.
               </p>
               <p>
-                Our platform combines interactive visualizations with comprehensive explanations 
+                This platform combines interactive visualizations with comprehensive explanations 
                 to help students, developers, and enthusiasts master algorithms and data structures 
                 at their own pace.
               </p>
@@ -190,7 +176,7 @@ const AboutPage = () => {
         </div>
 
         <div className="team-section">
-          <h2 className="section-title">Meet the Team</h2>
+          <h2 className="section-title">About the Developer</h2>
           <div className="team-grid">
             {team.map((member, index) => (
               <div key={index} className="team-card">
@@ -212,7 +198,7 @@ const AboutPage = () => {
           <div className="contribution-content">
             <h2 className="section-title">Contributing</h2>
             <p className="contribution-text">
-              AlgoViz is open source and we welcome contributions from the community. 
+              DSA Visualizer is open source and I welcome contributions from the community. 
               Whether you're fixing bugs, adding new algorithms, improving documentation, 
               or suggesting features, your help is appreciated!
             </p>
@@ -237,20 +223,20 @@ const AboutPage = () => {
           <h2 className="section-title">Get in Touch</h2>
           <div className="contact-content">
             <p className="contact-text">
-              Have questions, suggestions, or just want to say hello? We'd love to hear from you!
+              Have questions, suggestions, or want to collaborate? I'd love to hear from you!
             </p>
             <div className="contact-links">
-              <a href="#" className="contact-link">
+              <a href="mailto:Vanshp9824@gmail.com" className="contact-link">
                 <span className="contact-icon">📧</span>
-                hello@algoviz.com
+                Vanshp9824@gmail.com
               </a>
-              <a href="#" className="contact-link">
-                <span className="contact-icon">🐦</span>
-                @AlgoViz
+              <a href="tel:+919054255770" className="contact-link">
+                <span className="contact-icon">�</span>
+                +91 9054255770
               </a>
-              <a href="#" className="contact-link">
-                <span className="contact-icon">💬</span>
-                Discord Community
+              <a href="https://github.com/Patevansh" className="contact-link" target="_blank" rel="noopener noreferrer">
+                <span className="contact-icon">�</span>
+                GitHub @Patevansh
               </a>
             </div>
           </div>

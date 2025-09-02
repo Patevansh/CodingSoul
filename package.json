@@ -1,7 +1,17 @@
 {
-  "name": "Code_Helper",
+  "name": "dsa-visualizer",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Interactive platform to learn and visualize data structures and algorithms",
+  "author": {
+    "name": "Vansh Patel",
+    "email": "Vanshp9824@gmail.com"
+  },
+  "keywords": ["dsa", "algorithms", "data-structures", "visualization", "react", "education"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Patevansh/CodingSoul"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
