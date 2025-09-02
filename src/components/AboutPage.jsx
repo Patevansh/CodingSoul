@@ -56,7 +56,7 @@ const AboutPage = () => {
       name: 'Vansh Patel',
       role: 'Lead Developer & Creator',
       description: 'Passionate full-stack developer dedicated to creating educational tools that make learning algorithms and data structures engaging and accessible.',
-      avatar: '�‍�',
+      avatar: '👨‍💻',
       skills: ['React', 'JavaScript', 'Algorithm Design', 'UI/UX', 'Full Stack Development']
     }
   ];
@@ -203,18 +203,33 @@ const AboutPage = () => {
               or suggesting features, your help is appreciated!
             </p>
             <div className="contribution-actions">
-              <button className="contribution-btn primary">
+              <a 
+                href="https://github.com/Patevansh/CodingSoul" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="contribution-btn primary"
+              >
                 <span className="btn-icon">🌟</span>
                 Star on GitHub
-              </button>
-              <button className="contribution-btn secondary">
+              </a>
+              <a 
+                href="https://github.com/Patevansh/CodingSoul/fork" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="contribution-btn secondary"
+              >
                 <span className="btn-icon">🤝</span>
-                Contribute
-              </button>
-              <button className="contribution-btn tertiary">
+                Fork & Contribute
+              </a>
+              <a 
+                href="https://github.com/Patevansh/CodingSoul/issues" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="contribution-btn tertiary"
+              >
                 <span className="btn-icon">🐛</span>
                 Report Issues
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -231,12 +246,16 @@ const AboutPage = () => {
                 Vanshp9824@gmail.com
               </a>
               <a href="tel:+919054255770" className="contact-link">
-                <span className="contact-icon">�</span>
+                <span className="contact-icon">📱</span>
                 +91 9054255770
               </a>
-              <a href="https://github.com/Patevansh" className="contact-link" target="_blank" rel="noopener noreferrer">
-                <span className="contact-icon">�</span>
-                GitHub @Patevansh
+              <a href="https://github.com/Patevansh/CodingSoul" className="contact-link" target="_blank" rel="noopener noreferrer">
+                <span className="contact-icon">🐙</span>
+                View Project on GitHub
+              </a>
+              <a href="https://linkedin.com/in/vanshpatel005" className="contact-link" target="_blank" rel="noopener noreferrer">
+                <span className="contact-icon">💼</span>
+                LinkedIn Profile
               </a>
             </div>
           </div>

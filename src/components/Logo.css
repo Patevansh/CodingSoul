@@ -1,0 +1,556 @@
+/* Logo Component Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-container:hover {
+  transform: translateY(-1px);
+}
+
+.logo-container:hover .logo-design {
+  transform: scale(1.05);
+}
+
+/* Logo Icon */
+.logo-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary, #6366f1), var(--color-secondary, #8b5cf6));
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Main Logo Design */
+.logo-design {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+/* Algorithmic Flow */
+.algo-flow {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.flow-node {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  animation: flowPulse 2s ease-in-out infinite;
+}
+
+.flow-node.node-start {
+  background: #10b981;
+  animation-delay: 0s;
+}
+
+.flow-node.node-process {
+  background: #f59e0b;
+  animation-delay: 0.5s;
+}
+
+.flow-node.node-end {
+  background: #ef4444;
+  animation-delay: 1s;
+}
+
+.flow-connection {
+  width: 6px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+/* Data Structure Representation */
+.data-structure {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 16px;
+}
+
+.ds-node {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  animation: dsNodePulse 3s ease-in-out infinite;
+}
+
+.ds-node.ds-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.ds-node.ds-2 {
+  bottom: 0;
+  left: 2px;
+  animation-delay: 0.7s;
+}
+
+.ds-node.ds-3 {
+  bottom: 0;
+  right: 2px;
+  animation-delay: 1.4s;
+}
+
+.ds-connection {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  animation: connectionGlow 3s ease-in-out infinite;
+}
+
+.ds-connection.ds-conn-1 {
+  width: 8px;
+  height: 1px;
+  top: 5px;
+  left: 3px;
+  transform: rotate(-45deg);
+  animation-delay: 0.3s;
+}
+
+.ds-connection.ds-conn-2 {
+  width: 8px;
+  height: 1px;
+  top: 5px;
+  right: 3px;
+  transform: rotate(45deg);
+  animation-delay: 1s;
+}
+
+/* Accent Elements */
+.logo-accent {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: accentFloat 4s ease-in-out infinite;
+}
+
+.logo-accent.accent-1 {
+  width: 2px;
+  height: 2px;
+  top: 8px;
+  right: 4px;
+  animation-delay: 0s;
+}
+
+.logo-accent.accent-2 {
+  width: 1.5px;
+  height: 1.5px;
+  bottom: 8px;
+  left: 4px;
+  animation-delay: 2s;
+}
+
+/* Logo Text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-primary {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text, #1f2937);
+  letter-spacing: -0.5px;
+}
+
+.logo-secondary {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: -2px;
+}
+
+/* Size Variants */
+.logo-container.small .logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.logo-container.small .logo-design {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-container.small .logo-primary {
+  font-size: 14px;
+}
+
+.logo-container.small .logo-secondary {
+  font-size: 9px;
+}
+
+.logo-container.large .logo-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.logo-container.large .logo-design {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-container.large .logo-primary {
+  font-size: 22px;
+}
+
+.logo-container.large .logo-secondary {
+  font-size: 13px;
+}
+
+/* Theme Variants */
+.logo-container.minimal .logo-icon {
+  background: transparent;
+  box-shadow: none;
+  border: 2px solid var(--color-border, #e5e7eb);
+}
+
+.logo-container.minimal .flow-node,
+.logo-container.minimal .ds-node {
+  background: var(--color-primary, #6366f1);
+}
+
+.logo-container.minimal .flow-connection,
+.logo-container.minimal .ds-connection {
+  background: var(--color-text-secondary, #6b7280);
+}
+
+/* Animations */
+@keyframes flowPulse {
+  0%, 100% { 
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scaleX(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scaleX(1.2);
+  }
+}
+
+@keyframes dsNodePulse {
+  0%, 100% { 
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  33% { 
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes connectionGlow {
+  0%, 100% { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 0.7;
+  }
+}
+
+@keyframes accentFloat {
+  0%, 100% { 
+    opacity: 0.2;
+    transform: translateY(0px);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: translateY(-2px);
+  }
+}
+
+/* Dark Theme Support */
+body.dark .logo-primary {
+  color: var(--color-text, #f9fafb);
+}
+
+body.dark .logo-secondary {
+  color: var(--color-text-secondary, #9ca3af);
+}
+
+/* Hover Effects */
+.logo-container:hover .flow-node {
+  animation-duration: 1s;
+}
+
+.logo-container:hover .ds-node {
+  animation-duration: 1.5s;
+}
+
+.logo-container:hover .logo-icon {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 8px;
+  }
+  
+  .logo-container .logo-text {
+    display: none;
+  }
+}
+
+.stack-layer.layer-3 {
+  animation-delay: 0.6s;
+  background: #ef4444;
+}
+
+/* Algorithm/Graph Nodes */
+.logo-nodes {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.node {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary, #6366f1);
+  border-radius: 50%;
+  animation: nodePulse 2s ease-in-out infinite;
+}
+
+.node.node-1 {
+  top: -8px;
+  left: 0;
+  background: #8b5cf6;
+  animation-delay: 0s;
+}
+
+.node.node-2 {
+  top: 2px;
+  left: 8px;
+  background: #06b6d4;
+  animation-delay: 0.4s;
+}
+
+.node.node-3 {
+  top: 12px;
+  left: 0;
+  background: #f59e0b;
+  animation-delay: 0.8s;
+}
+
+/* Connection Lines */
+.connection {
+  position: absolute;
+  background: var(--color-text-secondary, #6b7280);
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+.connection.line-1 {
+  width: 8px;
+  height: 1px;
+  top: -5px;
+  left: 6px;
+  transform: rotate(45deg);
+  animation-delay: 0.2s;
+}
+
+.connection.line-2 {
+  width: 8px;
+  height: 1px;
+  top: 5px;
+  left: 6px;
+  transform: rotate(-45deg);
+  animation-delay: 0.6s;
+}
+
+/* Logo Text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-primary {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text, #111827);
+  letter-spacing: -0.5px;
+}
+
+.logo-secondary {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -2px;
+}
+
+/* Size Variants */
+.logo-container.small {
+  gap: 8px;
+}
+
+.logo-container.small .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-container.small .logo-primary {
+  font-size: 16px;
+}
+
+.logo-container.small .logo-secondary {
+  font-size: 8px;
+}
+
+.logo-container.large {
+  gap: 16px;
+}
+
+.logo-container.large .logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-container.large .logo-primary {
+  font-size: 24px;
+}
+
+.logo-container.large .logo-secondary {
+  font-size: 12px;
+}
+
+/* Variant Styles */
+.logo-container.minimal .logo-icon {
+  opacity: 0.8;
+}
+
+.logo-container.minimal .logo-secondary {
+  display: none;
+}
+
+.logo-container.icon-only .logo-text {
+  display: none;
+}
+
+/* Animations */
+@keyframes stackPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Theme Adaptations */
+body.navbar-theme-dark .logo-primary {
+  color: #ffffff;
+}
+
+body.navbar-theme-dark .logo-secondary {
+  color: #a1a1aa;
+}
+
+body.navbar-theme-neon .logo-primary {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+body.navbar-theme-neon .logo-secondary {
+  color: #ff006e;
+}
+
+body.navbar-theme-glass .logo-primary {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body.navbar-theme-glass .logo-secondary {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 8px;
+  }
+  
+  .logo-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .logo-primary {
+    font-size: 18px !important;
+  }
+  
+  .logo-secondary {
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-secondary {
+    display: none;
+  }
+}

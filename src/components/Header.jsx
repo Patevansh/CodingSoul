@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useTheme } from './ThemeProvider';
 import SearchBar from './SearchBar';
+import Logo from './Logo';
 import './Header.css';
 
 const Header = () => {
@@ -11,7 +11,6 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
-  const isHomePage = location.pathname === '/';
 
   const navigationItems = [
     { path: '/', label: 'Home', icon: '🏠' },
@@ -117,7 +116,7 @@ const Header = () => {
         <>
           {/* Vertical Navbar Layout */}
           <div className="navbar-brand">
-            <h2>DSA Visualizer</h2>
+            <Logo variant="minimal" size="medium" />
           </div>
           
           <div className="vertical-search-container">
@@ -148,7 +147,7 @@ const Header = () => {
             {/* Brand Section - Left */}
             <div className="header-left">
               <div className="navbar-brand">
-                <h2>DSA</h2>
+                <Logo variant="default" size="medium" />
               </div>
             </div>
 

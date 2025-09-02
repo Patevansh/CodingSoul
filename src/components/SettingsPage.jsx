@@ -13,9 +13,7 @@ const SettingsPage = () => {
     textSecondary: '#888888',
     border: '#333333'
   });
-  const [settings, setSettings] = useState({
-    // Settings can be added here if needed in the future
-  });
+  
   const [navbarStyle, setNavbarStyle] = useState('horizontal');
   const [navbarTheme, setNavbarTheme] = useState('default');
 
@@ -411,10 +409,6 @@ const SettingsPage = () => {
   };
 
   // Save settings function (simplified)
-  const updateSetting = (key, value) => {
-    // Function kept for potential future use
-    console.log(`Setting ${key} updated to:`, value);
-  };
 
   const handleThemeChange = (themeName) => {
     setTheme(themeName);
@@ -839,34 +833,52 @@ const SettingsPage = () => {
               <h3>ℹ️ About</h3>
               <div className="about-content">
                 <div className="app-info">
-                  <h4>Algorithm Visualizer</h4>
-                  <p>Version 2.0.0</p>
+                  <h4>DSA Visualizer</h4>
+                  <p>Version 1.0.0</p>
                   <p>Interactive learning platform for algorithms, data structures, and programming concepts.</p>
+                  <p className="developer-info">
+                    <strong>Developed by:</strong> Vansh Patel<br/>
+                    <strong>Contact:</strong> Vanshp9824@gmail.com
+                  </p>
                 </div>
                 <div className="links">
                   <button 
-                    className="link-button"
-                    onClick={() => window.open('https://github.com/your-repo/docs', '_blank')}
+                    className="link-button primary"
+                    onClick={() => window.open('https://github.com/Patevansh/CodingSoul', '_blank')}
                   >
-                    📚 Documentation
+                    ⭐ Star on GitHub
                   </button>
                   <button 
                     className="link-button"
-                    onClick={() => window.open('https://github.com/your-repo/issues', '_blank')}
+                    onClick={() => window.open('https://github.com/Patevansh/CodingSoul/fork', '_blank')}
+                  >
+                    🤝 Fork & Contribute
+                  </button>
+                  <button 
+                    className="link-button"
+                    onClick={() => window.open('https://github.com/Patevansh/CodingSoul/issues', '_blank')}
                   >
                     🐛 Report Bug
                   </button>
                   <button 
                     className="link-button"
-                    onClick={() => window.open('https://github.com/your-repo/issues/new?template=feature_request.md', '_blank')}
+                    onClick={() => window.open('https://github.com/Patevansh/CodingSoul/issues/new', '_blank')}
                   >
                     💡 Feature Request
                   </button>
                   <button 
                     className="link-button"
+                    onClick={() => window.open('https://github.com/Patevansh/CodingSoul/blob/main/README.md', '_blank')}
+                  >
+                  📚 Documentation
+                  </button>
+                  <button 
+                    className="link-button warning"
                     onClick={() => {
-                      localStorage.clear();
-                      window.location.reload();
+                      if (confirm('This will reset all your settings to default. Are you sure?')) {
+                        localStorage.clear();
+                        window.location.reload();
+                      }
                     }}
                   >
                     🔄 Reset All Settings

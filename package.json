@@ -12,6 +12,11 @@
     "type": "git",
     "url": "https://github.com/Patevansh/CodingSoul"
   },
+  "homepage": "https://github.com/Patevansh/CodingSoul",
+  "bugs": {
+    "url": "https://github.com/Patevansh/CodingSoul/issues"
+  },
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
