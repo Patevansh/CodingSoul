@@ -47,7 +47,7 @@ const DataStructuresPage = () => {
       cons: ['No random access', 'Extra memory for pointers', 'Not cache friendly'],
       useCases: ['When size varies significantly', 'Frequent insertions/deletions', 'Implementing stacks/queues'],
       icon: '🔗',
-      implemented: false
+      implemented: true
     },
     {
       id: 'stack',
@@ -65,7 +65,7 @@ const DataStructuresPage = () => {
       cons: ['Limited access pattern', 'No random access'],
       useCases: ['Function call management', 'Expression evaluation', 'Undo operations', 'Backtracking algorithms'],
       icon: '📚',
-      implemented: false
+      implemented: true
     },
     {
       id: 'queue',
@@ -83,7 +83,7 @@ const DataStructuresPage = () => {
       cons: ['Limited access pattern', 'No random access'],
       useCases: ['Process scheduling', 'Breadth-first search', 'Buffer for data streams'],
       icon: '🚶‍♂️',
-      implemented: false
+      implemented: true
     },
     {
       id: 'binary-tree',
@@ -101,7 +101,7 @@ const DataStructuresPage = () => {
       cons: ['Can become unbalanced', 'Complex implementation'],
       useCases: ['File systems', 'Expression parsing', 'Decision trees'],
       icon: '🌳',
-      implemented: false
+      implemented: true
     },
     {
       id: 'bst',
@@ -173,7 +173,7 @@ const DataStructuresPage = () => {
       cons: ['Complex implementation', 'Memory intensive', 'Difficult to visualize'],
       useCases: ['Social networks', 'Maps and navigation', 'Network topology', 'Dependency resolution'],
       icon: '🕸️',
-      implemented: false
+      implemented: true
     },
     {
       id: 'trie',

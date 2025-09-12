@@ -14,9 +14,13 @@ const AlgorithmsPage = () => {
     { id: 'dynamic', name: 'Dynamic Programming', icon: '🧮' },
     { id: 'greedy', name: 'Greedy', icon: '💰' },
     { id: 'divide', name: 'Divide & Conquer', icon: '⚔️' },
+    { id: 'string', name: 'String', icon: '📝' },
+    { id: 'backtracking', name: 'Backtracking', icon: '🔄' },
+    { id: 'tree', name: 'Tree', icon: '🌳' },
   ];
 
   const algorithms = [
+    // ===== SORTING ALGORITHMS =====
     {
       id: 'bubble-sort',
       name: 'Bubble Sort',
@@ -31,25 +35,104 @@ const AlgorithmsPage = () => {
     {
       id: 'quick-sort',
       name: 'Quick Sort',
-      category: 'sorting',
+      category: 'divide',
       difficulty: 'Medium',
       timeComplexity: 'O(n log n)',
       spaceComplexity: 'O(log n)',
       description: 'An efficient divide-and-conquer algorithm that works by selecting a pivot element and partitioning the array around it.',
-      implemented: false,
+      implemented: true,
       icon: '⚡'
     },
     {
       id: 'merge-sort',
       name: 'Merge Sort',
-      category: 'sorting',
+      category: 'divide',
       difficulty: 'Medium',
       timeComplexity: 'O(n log n)',
       spaceComplexity: 'O(n)',
       description: 'A stable divide-and-conquer algorithm that divides the array into halves and merges them in sorted order.',
-      implemented: false,
+      implemented: true,
       icon: '🔀'
     },
+    {
+      id: 'selection-sort',
+      name: 'Selection Sort',
+      category: 'sorting',
+      difficulty: 'Easy',
+      timeComplexity: 'O(n²)',
+      spaceComplexity: 'O(1)',
+      description: 'A simple sorting algorithm that finds the minimum element and places it at the beginning, repeating for the rest.',
+      implemented: true,
+      icon: '🎯'
+    },
+    {
+      id: 'insertion-sort',
+      name: 'Insertion Sort',
+      category: 'sorting',
+      difficulty: 'Easy',
+      timeComplexity: 'O(n²)',
+      spaceComplexity: 'O(1)',
+      description: 'A simple sorting algorithm that builds the final sorted array one element at a time, like sorting playing cards.',
+      implemented: true,
+      icon: '📋'
+    },
+    {
+      id: 'heap-sort',
+      name: 'Heap Sort',
+      category: 'sorting',
+      difficulty: 'Hard',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(1)',
+      description: 'A comparison-based sorting algorithm that uses a binary heap data structure to sort elements.',
+      implemented: false,
+      icon: '⛰️'
+    },
+    {
+      id: 'radix-sort',
+      name: 'Radix Sort',
+      category: 'sorting',
+      difficulty: 'Medium',
+      timeComplexity: 'O(d × n)',
+      spaceComplexity: 'O(n + k)',
+      description: 'A non-comparative sorting algorithm that sorts integers by processing digits from least to most significant.',
+      implemented: false,
+      icon: '🔢'
+    },
+    {
+      id: 'counting-sort',
+      name: 'Counting Sort',
+      category: 'sorting',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n + k)',
+      spaceComplexity: 'O(k)',
+      description: 'A non-comparative sorting algorithm that counts occurrences of each element and uses arithmetic to determine positions.',
+      implemented: false,
+      icon: '🧮'
+    },
+    {
+      id: 'bucket-sort',
+      name: 'Bucket Sort',
+      category: 'sorting',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n + k)',
+      spaceComplexity: 'O(n)',
+      description: 'A sorting algorithm that distributes elements into buckets and sorts each bucket individually.',
+      implemented: false,
+      icon: '🪣'
+    },
+    {
+      id: 'shell-sort',
+      name: 'Shell Sort',
+      category: 'sorting',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n^1.5)',
+      spaceComplexity: 'O(1)',
+      description: 'An in-place comparison sort that generalizes insertion sort by allowing exchanges of items that are far apart.',
+      implemented: false,
+      icon: '🐚'
+    },
+
+    // ===== SEARCHING ALGORITHMS =====
     {
       id: 'binary-search',
       name: 'Binary Search',
@@ -58,7 +141,7 @@ const AlgorithmsPage = () => {
       timeComplexity: 'O(log n)',
       spaceComplexity: 'O(1)',
       description: 'An efficient algorithm for finding an item from a sorted list by repeatedly dividing the search interval in half.',
-      implemented: false,
+      implemented: true,
       icon: '🎯'
     },
     {
@@ -69,8 +152,76 @@ const AlgorithmsPage = () => {
       timeComplexity: 'O(n)',
       spaceComplexity: 'O(1)',
       description: 'A simple search algorithm that finds a target value by checking each element sequentially.',
-      implemented: false,
+      implemented: true,
       icon: '🔍'
+    },
+    {
+      id: 'jump-search',
+      name: 'Jump Search',
+      category: 'searching',
+      difficulty: 'Medium',
+      timeComplexity: 'O(√n)',
+      spaceComplexity: 'O(1)',
+      description: 'A searching algorithm that jumps ahead by fixed steps and then performs linear search within the block.',
+      implemented: false,
+      icon: '🦘'
+    },
+    {
+      id: 'interpolation-search',
+      name: 'Interpolation Search',
+      category: 'searching',
+      difficulty: 'Medium',
+      timeComplexity: 'O(log log n)',
+      spaceComplexity: 'O(1)',
+      description: 'An improved binary search for uniformly distributed data that estimates the position of the target.',
+      implemented: false,
+      icon: '📐'
+    },
+    {
+      id: 'exponential-search',
+      name: 'Exponential Search',
+      category: 'searching',
+      difficulty: 'Medium',
+      timeComplexity: 'O(log n)',
+      spaceComplexity: 'O(1)',
+      description: 'A searching algorithm that finds the range containing the target and then performs binary search.',
+      implemented: false,
+      icon: '📈'
+    },
+    {
+      id: 'ternary-search',
+      name: 'Ternary Search',
+      category: 'searching',
+      difficulty: 'Medium',
+      timeComplexity: 'O(log₃ n)',
+      spaceComplexity: 'O(1)',
+      description: 'A divide-and-conquer search algorithm that divides the array into three parts instead of two.',
+      implemented: false,
+      icon: '🔱'
+    },
+
+    // ===== GRAPH ALGORITHMS =====
+    {
+      id: 'bfs',
+      name: 'Breadth-First Search',
+      category: 'graph',
+      difficulty: 'Medium',
+      timeComplexity: 'O(V + E)',
+      spaceComplexity: 'O(V)',
+      description: 'Explores nodes level by level, visiting all neighbors before moving to the next level.',
+      implemented: true,
+      icon: '🌊'
+    },
+    {
+      id: 'dfs',
+      name: 'Depth-First Search',
+      category: 'graph',
+      difficulty: 'Medium',
+      timeComplexity: 'O(V + E)',
+      spaceComplexity: 'O(V)',
+      description: 'Explores as far as possible along each branch before backtracking.',
+      implemented: true,
+      icon: '🏔️'
     },
     {
       id: 'dijkstra',
@@ -84,27 +235,62 @@ const AlgorithmsPage = () => {
       icon: '🗺️'
     },
     {
-      id: 'bfs',
-      name: 'Breadth-First Search',
+      id: 'bellman-ford',
+      name: 'Bellman-Ford Algorithm',
       category: 'graph',
-      difficulty: 'Medium',
-      timeComplexity: 'O(V + E)',
+      difficulty: 'Hard',
+      timeComplexity: 'O(VE)',
       spaceComplexity: 'O(V)',
-      description: 'Explores nodes level by level, visiting all neighbors before moving to the next level.',
+      description: 'Finds shortest paths from a source vertex to all other vertices, can handle negative weights.',
       implemented: false,
-      icon: '🌊'
+      icon: '🛣️'
     },
     {
-      id: 'dfs',
-      name: 'Depth-First Search',
+      id: 'floyd-warshall',
+      name: 'Floyd-Warshall Algorithm',
+      category: 'dynamic',
+      difficulty: 'Hard',
+      timeComplexity: 'O(V³)',
+      spaceComplexity: 'O(V²)',
+      description: 'Finds shortest paths between all pairs of vertices in a weighted graph.',
+      implemented: false,
+      icon: '🗺️'
+    },
+    {
+      id: 'kruskal',
+      name: "Kruskal's MST",
+      category: 'greedy',
+      difficulty: 'Hard',
+      timeComplexity: 'O(E log E)',
+      spaceComplexity: 'O(V)',
+      description: 'Finds the minimum spanning tree of a graph using a greedy approach with edge sorting.',
+      implemented: false,
+      icon: '🌲'
+    },
+    {
+      id: 'prim',
+      name: "Prim's MST",
+      category: 'greedy',
+      difficulty: 'Hard',
+      timeComplexity: 'O(E log V)',
+      spaceComplexity: 'O(V)',
+      description: 'Finds the minimum spanning tree of a graph by growing the tree one vertex at a time.',
+      implemented: false,
+      icon: '🌿'
+    },
+    {
+      id: 'topological-sort',
+      name: 'Topological Sort',
       category: 'graph',
       difficulty: 'Medium',
       timeComplexity: 'O(V + E)',
       spaceComplexity: 'O(V)',
-      description: 'Explores as far as possible along each branch before backtracking.',
+      description: 'Linear ordering of vertices in a directed acyclic graph where every directed edge goes from earlier to later.',
       implemented: false,
-      icon: '🏔️'
+      icon: '📊'
     },
+
+    // ===== DYNAMIC PROGRAMMING =====
     {
       id: 'fibonacci',
       name: 'Fibonacci Sequence',
@@ -126,6 +312,245 @@ const AlgorithmsPage = () => {
       description: 'Finds the optimal way to pack items with given weights and values into a knapsack.',
       implemented: false,
       icon: '🎒'
+    },
+    {
+      id: 'lcs',
+      name: 'Longest Common Subsequence',
+      category: 'dynamic',
+      difficulty: 'Medium',
+      timeComplexity: 'O(mn)',
+      spaceComplexity: 'O(mn)',
+      description: 'Finds the longest subsequence common to two sequences without requiring consecutive elements.',
+      implemented: false,
+      icon: '🔗'
+    },
+    {
+      id: 'edit-distance',
+      name: 'Edit Distance',
+      category: 'dynamic',
+      difficulty: 'Medium',
+      timeComplexity: 'O(mn)',
+      spaceComplexity: 'O(mn)',
+      description: 'Calculates the minimum number of operations required to transform one string into another.',
+      implemented: false,
+      icon: '✏️'
+    },
+    {
+      id: 'coin-change',
+      name: 'Coin Change',
+      category: 'dynamic',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n × amount)',
+      spaceComplexity: 'O(amount)',
+      description: 'Finds the minimum number of coins needed to make a given amount using dynamic programming.',
+      implemented: false,
+      icon: '🪙'
+    },
+    {
+      id: 'house-robber',
+      name: 'House Robber',
+      category: 'dynamic',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n)',
+      spaceComplexity: 'O(1)',
+      description: 'Determines the maximum amount that can be robbed without robbing adjacent houses.',
+      implemented: false,
+      icon: '🏠'
+    },
+    {
+      id: 'lis',
+      name: 'Longest Increasing Subsequence',
+      category: 'dynamic',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(n)',
+      description: 'Finds the length of the longest subsequence where elements are in increasing order.',
+      implemented: false,
+      icon: '📈'
+    },
+
+    // ===== GREEDY ALGORITHMS =====
+    {
+      id: 'activity-selection',
+      name: 'Activity Selection',
+      category: 'greedy',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(1)',
+      description: 'Selects the maximum number of non-overlapping activities from a given set.',
+      implemented: false,
+      icon: '📅'
+    },
+    {
+      id: 'huffman-coding',
+      name: 'Huffman Coding',
+      category: 'greedy',
+      difficulty: 'Hard',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(n)',
+      description: 'A lossless data compression algorithm that assigns variable-length codes based on frequency.',
+      implemented: false,
+      icon: '🗜️'
+    },
+    {
+      id: 'fractional-knapsack',
+      name: 'Fractional Knapsack',
+      category: 'greedy',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(1)',
+      description: 'Maximizes value in knapsack by taking fractions of items based on value-to-weight ratio.',
+      implemented: false,
+      icon: '⚖️'
+    },
+    {
+      id: 'job-scheduling',
+      name: 'Job Scheduling',
+      category: 'greedy',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n log n)',
+      spaceComplexity: 'O(n)',
+      description: 'Schedules jobs to maximize profit while meeting deadlines using greedy approach.',
+      implemented: false,
+      icon: '⏰'
+    },
+
+    // ===== STRING ALGORITHMS =====
+    {
+      id: 'kmp',
+      name: 'KMP Pattern Matching',
+      category: 'string',
+      difficulty: 'Hard',
+      timeComplexity: 'O(n + m)',
+      spaceComplexity: 'O(m)',
+      description: 'Efficiently searches for a pattern in text using partial match table to avoid redundant comparisons.',
+      implemented: false,
+      icon: '🔍'
+    },
+    {
+      id: 'rabin-karp',
+      name: 'Rabin-Karp Algorithm',
+      category: 'string',
+      difficulty: 'Medium',
+      timeComplexity: 'O(nm)',
+      spaceComplexity: 'O(1)',
+      description: 'String matching algorithm that uses hashing to find patterns in text.',
+      implemented: false,
+      icon: '#️⃣'
+    },
+    {
+      id: 'boyer-moore',
+      name: 'Boyer-Moore Algorithm',
+      category: 'string',
+      difficulty: 'Hard',
+      timeComplexity: 'O(nm)',
+      spaceComplexity: 'O(σ)',
+      description: 'Efficient string searching algorithm that skips characters by looking at mismatches.',
+      implemented: false,
+      icon: '⏩'
+    },
+    {
+      id: 'z-algorithm',
+      name: 'Z Algorithm',
+      category: 'string',
+      difficulty: 'Medium',
+      timeComplexity: 'O(n)',
+      spaceComplexity: 'O(n)',
+      description: 'Linear time algorithm for pattern matching that constructs Z array for efficient searching.',
+      implemented: false,
+      icon: '🅿️'
+    },
+
+    // ===== BACKTRACKING ALGORITHMS =====
+    {
+      id: 'n-queens',
+      name: 'N-Queens Problem',
+      category: 'backtracking',
+      difficulty: 'Hard',
+      timeComplexity: 'O(N!)',
+      spaceComplexity: 'O(N)',
+      description: 'Places N queens on NxN chessboard so that no two queens attack each other.',
+      implemented: false,
+      icon: '♛'
+    },
+    {
+      id: 'sudoku-solver',
+      name: 'Sudoku Solver',
+      category: 'backtracking',
+      difficulty: 'Hard',
+      timeComplexity: 'O(9^(n²))',
+      spaceComplexity: 'O(n²)',
+      description: 'Solves Sudoku puzzles using backtracking with constraint satisfaction.',
+      implemented: false,
+      icon: '🔢'
+    },
+    {
+      id: 'maze-solver',
+      name: 'Maze Solver',
+      category: 'backtracking',
+      difficulty: 'Medium',
+      timeComplexity: 'O(4^(mn))',
+      spaceComplexity: 'O(mn)',
+      description: 'Finds path through maze using backtracking to explore all possible routes.',
+      implemented: false,
+      icon: '🌽'
+    },
+    {
+      id: 'subset-sum',
+      name: 'Subset Sum',
+      category: 'backtracking',
+      difficulty: 'Medium',
+      timeComplexity: 'O(2^n)',
+      spaceComplexity: 'O(n)',
+      description: 'Finds if there exists a subset with sum equal to given target using backtracking.',
+      implemented: false,
+      icon: '🎯'
+    },
+
+    // ===== TREE ALGORITHMS =====
+    {
+      id: 'tree-traversal',
+      name: 'Tree Traversal',
+      category: 'tree',
+      difficulty: 'Easy',
+      timeComplexity: 'O(n)',
+      spaceComplexity: 'O(h)',
+      description: 'Various methods to visit all nodes in a tree: inorder, preorder, postorder, level-order.',
+      implemented: true,
+      icon: '🌳'
+    },
+    {
+      id: 'bst-operations',
+      name: 'BST Operations',
+      category: 'tree',
+      difficulty: 'Medium',
+      timeComplexity: 'O(log n)',
+      spaceComplexity: 'O(log n)',
+      description: 'Insert, delete, search operations on Binary Search Tree with balancing considerations.',
+      implemented: false,
+      icon: '🎯'
+    },
+    {
+      id: 'avl-tree',
+      name: 'AVL Tree',
+      category: 'tree',
+      difficulty: 'Hard',
+      timeComplexity: 'O(log n)',
+      spaceComplexity: 'O(n)',
+      description: 'Self-balancing binary search tree where height difference of subtrees is at most 1.',
+      implemented: false,
+      icon: '⚖️'
+    },
+    {
+      id: 'red-black-tree',
+      name: 'Red-Black Tree',
+      category: 'tree',
+      difficulty: 'Hard',
+      timeComplexity: 'O(log n)',
+      spaceComplexity: 'O(n)',
+      description: 'Self-balancing binary search tree with colored nodes to maintain balance properties.',
+      implemented: false,
+      icon: '🔴'
     }
   ];
 
@@ -144,7 +569,16 @@ const AlgorithmsPage = () => {
 
   const handleAlgorithmClick = (algorithm) => {
     if (algorithm.implemented) {
-      navigate(`/${algorithm.id}`);
+      // Handle special cases for implemented algorithms
+      if (algorithm.id === 'bfs') {
+        navigate('/bfs');
+      } else if (algorithm.id === 'dfs') {
+        navigate('/dfs');
+      } else if (algorithm.id === 'tree-traversal') {
+        navigate('/binary-tree-visualizer');
+      } else {
+        navigate(`/${algorithm.id}`);
+      }
     }
   };
 
@@ -183,7 +617,7 @@ const AlgorithmsPage = () => {
           {filteredAlgorithms.map(algorithm => (
             <div
               key={algorithm.id}
-              className={`algorithm-card ${algorithm.implemented ? 'implemented' : 'coming-soon'}`}
+              className={`algorithm-card ${algorithm.implemented ? 'implemented' : ''}`}
               onClick={() => handleAlgorithmClick(algorithm)}
             >
               <div className="card-header">
@@ -200,11 +634,6 @@ const AlgorithmsPage = () => {
                 {algorithm.implemented && (
                   <div className="status-badge implemented-badge">
                     ✓ Available
-                  </div>
-                )}
-                {!algorithm.implemented && (
-                  <div className="status-badge coming-soon-badge">
-                    🚧 Coming Soon
                   </div>
                 )}
               </div>
@@ -224,7 +653,7 @@ const AlgorithmsPage = () => {
 
               {algorithm.implemented && (
                 <div className="card-footer">
-                  <button className="try-button">
+                  <button className="try-button" onClick={() => handleAlgorithmClick(algorithm)}>
                     <span className="button-icon">🚀</span>
                     Try It Now
                   </button>
